@@ -1,0 +1,27 @@
+.agrandar {
+    width: 390px;
+}
+
+.modificarInput1 {
+    width: 200px;
+    margin: 0 auto;
+    float: none;
+}
+
+body {
+    background-image: url("/imagenes/Fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.plataforma {
+    color: none;
+    background-image: url("/imagenes/plataforma.png");
+    background-size: 100px 50px;
+    background-repeat: no-repeat;
+    background-color: none;
+    height: 50px;
+    width: 100px;
+}
