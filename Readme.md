@@ -17,21 +17,24 @@
 
 ## Objetivo 🎯
 
-Este proyecto requería crear una web con boostrap.
+Este proyecto requiere entregar una web con un juego de tic tac toe.
 
 ## Sobre el proyecto 🔎
 
-Decidí crear una aplicación web que simulara una página de una pastelería.
+Decidí crear web de tic tac toe con diseño del juego de smash bros, principalmente en los personages del muundo de kirby.
 
 ## Deploy 🚀
 
 <div align="center">
-    <a href="https://github.com/ZackFer90/ProyectoRestaurante.git"><strong>Url a producción </strong></a>🚀🚀🚀
+    <a href="https://github.com/ZackFer90/ProyectoTicTacToe"><strong>Url a producción </strong></a>🚀🚀🚀
 </div>
 
 ## Stack
 
 <div align="center">
+<a>
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+</a>
 <a>
     <img  src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
 </a>
@@ -47,22 +50,14 @@ Decidí crear una aplicación web que simulara una página de una pastelería.
 ## Vistas
 
 <h3>Resultado</h3>
-Página index
+Página inicio
 <img src="imagenes/paginaInicio.PNG">
-Página carta para PC
+Página de tic tac toe
 <img src="imagenes/cartaOrdenador.PNG">
-Página carta para móvil<br/>
+Página de victoria<br/>
 <img src="imagenes/cartaMovil.PNG"><br/>
-Página contacto para PC
+Página de derrota
 <img src="imagenes/contactoOrdenador.PNG">
-Página contacto para móvil<br/>
-<img src="imagenes/contactoMovil.PNG">
-
-<h3>Modelos</h3>
-Modelo carta
-<img src="imagenes/modeloCarta.PNG">
-Modelo contactos
-<img src="imagenes/modeloContacto.PNG">
 
 ## Licencia
 
@@ -72,14 +67,8 @@ Este proyecto se encuentra bajo licencia de "Mi mismo"
 
 Para conseguir mi objetivo he recopilado información de:
 
-- https://www.pasteleriaascaso.com/todos-los-productos/
-- https://shoko.biz/contact/
-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-- https://www.seoptimer.com/es/blog/footer/
-- https://uniwebsidad.com/libros/bootstrap-3/capitulo-2/tipos-de-rejillas
-- https://getbootstrap.com/docs/4.0/utilities/colors/
-- https://getbootstrap.com/docs/5.2/components/navbar/
-- https://www.w3schools.com/css/css3_colors.asp
+- https://getbootstrap.com/docs/5.2/getting-started/rtl/#custom-rtl-values
+- https://www.pngwing.com/es/search?q=smash+bros
 
 ## Agradecimientos:
 
