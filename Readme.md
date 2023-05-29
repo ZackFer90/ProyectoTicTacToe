@@ -69,6 +69,7 @@ Para conseguir mi objetivo he recopilado información de:
 
 - https://getbootstrap.com/docs/5.2/getting-started/rtl/#custom-rtl-values
 - https://www.pngwing.com/es/search?q=smash+bros
+- https://cybmeta.com/display-none-vs-visibility-hidden-y-tu-como-escondes-las-cosas
 
 ## Agradecimientos:
 
