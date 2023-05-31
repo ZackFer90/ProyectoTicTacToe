@@ -46,6 +46,24 @@ button{
     margin-bottom: 40px;
 }
 
+.colorTexto{
+    color:chartreuse;
+    background-color: rgb(0, 0, 0, 0.4);
+    margin-top: -60px;
+}
+
+.mt {
+    margin-top: 95%;
+}
+
+.mt2{
+    margin-top: -5%;
+}
+
+.cajaImagen{
+    margin-top: -15%;
+}
+
 /* Tic Tac Toe */
 
 .kirby{
@@ -134,6 +152,10 @@ button{
 }
 
 @media (min-width: 992px){
+    .mt2{
+        margin-top: 20%;
+    }
+
     .mt {
         margin-top: 20%;
     }
@@ -152,6 +174,7 @@ button{
 
     .cajaImagen{
         margin-left: 33%;
+        margin-top: -2%;
     }
 
     .cajaImagenTic{
@@ -182,5 +205,13 @@ button{
 
     .fondoTransparente{
         background-color: rgb(238, 227, 227, 0.1);
+    }
+
+    .colorTexto{
+        margin-top: 7px;
+    }
+
+    .imagenCentroTic{
+        margin-left: -17%;
     }
 }
