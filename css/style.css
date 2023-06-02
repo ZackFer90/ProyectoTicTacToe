@@ -151,7 +151,70 @@ button{
     background-color: rgb(238, 227, 227, 0.3);
 }
 
+/* Ganador */
+
+.colorGana{
+    background-image: url("/imagenes/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px 700px;
+    height: 700px;
+    width: 500px;
+}
+
+.cajaGanador{
+    height: 400px;
+}
+
+.cajaGanadorBottom{
+    height: 90px;
+    width: 390px;
+    background-color: #f8d653;
+    margin-top: 30%;
+}
+
+.iconoGana{
+    width: 50px;
+    height: 50px;
+}
+
+.recotarCaja{
+    width: 100px;
+    height: 100px;
+}
+
+.winner{
+    margin-left: -10%;
+}
+
+.letraGrande{
+    font-size: 50px;
+}
+
+.infoJug{
+    margin-top: 5%;
+}
+
+.plataformaMetaGanador{
+    color: none;
+    background-image: url("/imagenes/plataformaGrande.png");
+    background-size: 500px 300px;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-color: none;
+    height: 350px;
+    width: 400px;
+    margin-left: -28%;
+    margin-top: 30%;
+}
+
+.ganadorTrogeo{
+    width: 350;
+    height: 350px;
+    margin-left: 40px;
+}
+
 @media (min-width: 992px){
+    
     .mt2{
         margin-top: 20%;
     }
@@ -178,7 +241,7 @@ button{
     }
 
     .cajaImagenTic{
-        margin-left: 33%;
+        left: 23%;
     }
 
     .tamañoCelda{
@@ -213,5 +276,67 @@ button{
 
     .imagenCentroTic{
         margin-left: -17%;
+    }
+
+    /* Ganador */
+
+    .winner{
+        margin-left: 10%;
+        margin-top: -20px;
+    }
+    
+    .colorGana{
+        background-image: url("/imagenes/Fondo.jpg");
+        background-repeat: no-repeat;
+        background-size: 1365px 608px;
+        height: 608px;
+        width: 1365px;
+    }
+
+    .cajaGanadorBottom{
+        height: 100px;
+        width: 1353px;
+        background-color: #f8d653;
+        transform: rotate(-4deg);
+        margin-left: 7px;
+        margin-top: 0%;
+    }
+
+    .letraGrande{
+        font-size: 80px;
+        margin-right: 4%;
+    }
+
+    .recotarCaja{
+        margin-right: -20%;
+        width: 300px;
+        height: 100px;
+    }
+
+    .ganadorTrogeo{
+        width: 350;
+        height: 350px;
+        margin-left: 40px;
+    }
+
+    .plataformaMetaGanador{
+        color: none;
+        background-image: url("/imagenes/plataformaGrande.png");
+        background-size: 500px 300px;
+        background-repeat: no-repeat;
+        background-position:bottom;
+        background-color: none;
+        height: 350px;
+        width: 400px;
+        margin-left: -0%;
+        margin-top: 0%;
+    }
+
+    .cajaGanador{
+        height: 400px;
+    }
+
+    .mtj{
+        margin-top: -10px;
     }
 }
