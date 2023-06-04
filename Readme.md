@@ -49,15 +49,16 @@ Decidí crear web de tic tac toe con diseño del juego de smash bros, principalm
 
 ## Vistas
 
-<h3>Resultado</h3>
+<h3>Resultado</h3><br/>
 Página inicio
-<img src="imagenes/paginaInicio.PNG">
+<img src="imagenesRead/indexOrdena.PNG">
+<img src="imagenesRead/indexMovil.PNG"><br/><br/>
 Página de tic tac toe
-<img src="imagenes/cartaOrdenador.PNG">
+<img src="imagenesRead/TicTacToeOrdena.PNG">
+<img src="imagenesRead/TicTacToeMovil.PNG"><br/><br/>
 Página de victoria<br/>
-<img src="imagenes/cartaMovil.PNG"><br/>
-Página de derrota
-<img src="imagenes/contactoOrdenador.PNG">
+<img src="imagenesRead/WinnerOrdena.PNG">
+<img src="imagenesRead/WinnerMovil.PNG"><br/><br/>
 
 ## Licencia
 
