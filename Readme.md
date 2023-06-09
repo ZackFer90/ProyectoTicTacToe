@@ -68,11 +68,18 @@ Este proyecto se encuentra bajo licencia de "Mi mismo"
 
 Para conseguir mi objetivo he recopilado información de:
 
+<h3>Html</h3>
+
 - https://getbootstrap.com/docs/5.2/getting-started/rtl/#custom-rtl-values
 - https://www.pngwing.com/es/search?q=smash+bros
 - https://cybmeta.com/display-none-vs-visibility-hidden-y-tu-como-escondes-las-cosas
 - https://paletadecolores.online/colores-html/amarillo/dorado/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate
+
+<h3>Javascipt</h3>
+
+- https://www.programacionfacil.org/cursos/javascript/capitulo_35_javascript_anadir_modificar_propiedades_objetos.html
+- 
 
 ## Agradecimientos:
 

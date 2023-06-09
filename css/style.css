@@ -100,10 +100,6 @@ button{
     height: 80px;
 }
 
-.ocultar{
-    visibility: hidden;
-}
-
 .plataformaMetaJug {
     color: none;
     background-image: url("/imagenes/plataforma.png");
