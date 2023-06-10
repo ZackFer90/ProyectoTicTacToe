@@ -29,6 +29,7 @@ let gameObject = {
 
     },
     bot: {
+        jugador: "bot",
         name: "Rey Dedede",
         boton: "",
         imagen: "imagenes/ReyDedede.png",
@@ -50,6 +51,7 @@ clicar1.addEventListener("click", () => {
     palabra = document.getElementById("jug1").value;
     if(palabra != ""){
         clicar1.disabled = true;
+        clicar3.disabled = true;
         gameObject.player1.jugador=palabra;
         cont++;
         cambiarVentana();
@@ -63,33 +65,33 @@ clicar2.addEventListener("click", () => {
     palabra = document.getElementById("jug2").value;
     if(palabra != ""){
         clicar2.disabled = true;
+        clicar4.disabled = true;
         gameObject.player2.jugador=palabra;
         cont++;
         cambiarVentana();
-    }
-    
+    } 
 });
 
 // Clicamos en Bot
 
 const clicar3 = document.getElementById("botonBot1");
 clicar3.addEventListener("click", () => {
+    gameObject.bot.boton = "Boton1";
     clicar3.disabled = true;
     clicar4.disabled = true;
     clicar1.disabled = true;
     cont++;
-    gameObject.empate.boton = "Boton1";
     cambiarVentana();
     
 });
 
 const clicar4 = document.getElementById("botonBot2");
 clicar4.addEventListener("click", () => {
+    gameObject.bot.boton = "Boton2";
     clicar4.disabled = true;
     clicar3.disabled = true;
     clicar2.disabled = true;
     cont++;
-    gameObject.empate.boton = "Boton2";
     cambiarVentana();
     
 });
@@ -97,6 +99,7 @@ clicar4.addEventListener("click", () => {
 //Cuando pulsemos dos botones nos llevamos el objeto y nos vamos a la otra pagina
 
 function cambiarVentana(){
+    console.log(gameObject.bot.boton);
     if(cont == 2){
         sessionStorage.setItem("clave", JSON.stringify(gameObject));
         window.location.assign("ticTacToe.html");

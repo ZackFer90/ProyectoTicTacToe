@@ -21,7 +21,7 @@ function cambiarPantalla(){
     }else if(user.winner == user.player2.jugador){
         icono.innerHTML = `<img src="${user.player2.icono}" class="iconoGana" />`;
         nombreJugador.innerHTML = user.winner;
-        trofeo.innerHTML = `<img src="${user.player1.imagen}" class="${user.player2.ganadorClase}" />`;
+        trofeo.innerHTML = `<img src="${user.player2.imagen}" class="${user.player2.ganadorClase}" />`;
         personaje.innerHTML = user.player2.name;
     }else{
         icono.innerHTML = `<img src="${user.empate.icono}" class="iconoGana" />`;

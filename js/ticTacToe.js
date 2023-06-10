@@ -1,7 +1,10 @@
 /// Gestionamos el bot
 
+function jugadorBot(){
 
-document.getElementById("").innerHTML
+}
+
+// document.getElementById("").innerHTML
 // Array que impedira que entre otra vez si cumple cierta condicion
 
 let arrayEntrar = [true, true, true, true, true, true, true, true];
@@ -31,7 +34,7 @@ function ganadorTresCampos(campo1, campo2, campo3){
 ///Comprobamos si los campos en linia estan vacios o no, en caso de estar llenos no reenvia a otra funcion
 
 function campoLleno(campos){
-    console.log(arrayEntrar[0]);
+    
 ///Horizontales
     if(campos[0][0].innerHTML != "" && campos[0][1].innerHTML != "" && campos[0][2].innerHTML != "" && arrayEntrar[0]){
         console.log("Campo Horiz 1 lleno");
@@ -114,11 +117,6 @@ function ganadorEmpate(array){
 
 let user = JSON.parse(sessionStorage.getItem("clave"));
 
-// Mostramos a trabes del input los datos recogidos por el session
-
-document.getElementById("jug1").innerHTML = user.player1.jugador;
-document.getElementById("jug2").innerHTML = user.player2.jugador;
-
 // Recogemos las 9 celdas del tres en raya en cajas
 
 const cajas = document.getElementsByClassName("celda");
@@ -143,12 +141,72 @@ function cambiarTurno(player1, player2, caja) {
     }
 }
 
+// Mediante esta funcion Gestionamos la Posicion del bot en el tablero y si hay un bot
+
+function quienesJuegan(){
+    let posicion;
+    if(user.bot.boton == ""){
+        // Mostramos a trabes del input los datos recogidos por el session
+
+        document.getElementById("jug1").innerHTML = user.player1.jugador;
+        document.getElementById("jug2").innerHTML = user.player2.jugador;
+        posicion = 1;
+    }else if(user.bot.boton == "Boton1"){
+        document.getElementById("jug1").innerHTML = user.bot.name;
+        document.getElementById("jug2").innerHTML = user.player2.jugador;
+        posicion = 2;
+    }else if(user.bot.boton == "Boton2"){
+        document.getElementById("jug1").innerHTML = user.player1.jugador;
+        document.getElementById("jug2").innerHTML = user.bot.name;
+        posicion = 3;
+    }else{
+        console.log("Algo falla");
+    }
+    return posicion;
+}
 
 // Con el forof comprobamos a que caja le clica y añadimos una reaccion que nos cambiara de jugador y nos insertara una imagen segun el jugador
+let quienJuega = true;
 
-for (const caja of cajas) {
-    caja.addEventListener("click", () => {
-        cambiarTurno(user.player1, user.player2, caja)
-        ganadorEmpate(cajas);
-    });
+function empiezaJuego(){
+    let player1;
+    let player2;
+    if(quienJuega){
+        switch (quienesJuegan()) {
+            case 1:
+                player1 = user.player1;
+                player2 = user.player2;
+                break;
+            case 2:
+                player1 = user.bot;
+                player2 = user.player2;
+                break;
+            case 3:
+                player1 = user.player1;
+                player2 = user.bot;
+                break;
+        }
+        quienJuega = false;
+    }
+
+    for (const caja of cajas) {
+        caja.addEventListener("click", () => {
+            // console.log(user);
+            // if(user.bot.boton == ""){
+            //     cambiarTurno(user.player1, user.player2, caja);
+            // }else if(user.bot.boton == "Boton1"){
+            //     cambiarTurno(user.player1, user.player2, caja);
+            // console.log("Ya esta aquiiiii");
+            // }else if(user.bot.boton == "Boton2"){
+            //     cambiarTurno(user.player1, user.player2, caja);
+            //     console.log("Ya esta aquiiiii");
+            // }else{
+            //     console.log("Algo falla");
+            // }
+            cambiarTurno(player1, player2, caja);
+            ganadorEmpate(cajas);
+        });
+    }
 }
+
+empiezaJuego();
