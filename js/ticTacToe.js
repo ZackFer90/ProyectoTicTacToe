@@ -1,8 +1,6 @@
-/// Gestionamos el bot
+/// creamos una funcion que nos gestionara un numero aleatorio para el bot
 
-function jugadorBot(){
-
-}
+const randMinMax = (min, max) => Math.round(Math.random()*(max-min)+min);
 
 // document.getElementById("").innerHTML
 // Array que impedira que entre otra vez si cumple cierta condicion
@@ -37,51 +35,43 @@ function campoLleno(campos){
     
 ///Horizontales
     if(campos[0][0].innerHTML != "" && campos[0][1].innerHTML != "" && campos[0][2].innerHTML != "" && arrayEntrar[0]){
-        console.log("Campo Horiz 1 lleno");
         ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[0][1].querySelector('img').getAttribute('id'), campos[0][2].querySelector('img').getAttribute('id'));
         arrayEntrar[0] = false;
     }
 
     if(campos[1][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[1][2].innerHTML != "" && arrayEntrar[1]){
-        console.log("Campo Horiz 2 lleno");
         ganadorTresCampos(campos[1][0].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[1][2].querySelector('img').getAttribute('id'));
         arrayEntrar[1] = false;
     }
 
     if(campos[2][0].innerHTML != "" && campos[2][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[2]){
-        console.log("Campo Horiz 3 lleno");
         ganadorTresCampos(campos[2][0].querySelector('img').getAttribute('id'), campos[2][1].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
         arrayEntrar[2] = false;
     }
 
 ///Verticales
     if(campos[0][0].innerHTML != "" && campos[1][0].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[3]){
-        console.log("Campo Vert 1 lleno");
         ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[1][0].querySelector('img').getAttribute('id'), campos[2][0].querySelector('img').getAttribute('id'));
         arrayEntrar[3] = false;
     }
 
     if(campos[0][1].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][1].innerHTML != "" && arrayEntrar[4]){
-        console.log("Campo Vert 2 lleno");
         ganadorTresCampos(campos[0][1].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][1].querySelector('img').getAttribute('id'));
         arrayEntrar[4] = false;
     }
 
     if(campos[0][2].innerHTML != "" && campos[1][2].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[5]){
-        console.log("Campo Vert 3 lleno");
         ganadorTresCampos(campos[1][2].querySelector('img').getAttribute('id'), campos[1][2].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
         arrayEntrar[5] = false;
     }
 
 ///Diagonal
     if(campos[0][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[6]){
-        console.log("Campo Diago 1 lleno");
         ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
         arrayEntrar[6] = false;
     }
 
     if(campos[0][2].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[7]){
-        console.log("Campo Diago 2 lleno");
         ganadorTresCampos(campos[0][2].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][0].querySelector('img').getAttribute('id'));
         arrayEntrar[7] = false;
     }
@@ -98,7 +88,8 @@ function ganadorEmpate(array){
 
     campoLleno(arrayPos);
 
-    let empate = 0;
+    setTimeout(() => {
+        let empate = 0;
     for (const casilla of array) {
         
         if (casilla.innerHTML != ""){
@@ -111,6 +102,8 @@ function ganadorEmpate(array){
             empate++;
         }
     }
+    }
+    , 5000);
 }
 
 // Nos traemos un objetos con diversos datos
@@ -125,7 +118,7 @@ const cajas = document.getElementsByClassName("celda");
 
 let cambiarJugador = true;
 
-// Gestionamos los turnos
+// Gestionamos los turnos de los dos jugadores
 
 function cambiarTurno(player1, player2, caja) {
     if(cambiarJugador){
@@ -141,6 +134,36 @@ function cambiarTurno(player1, player2, caja) {
     }
 }
 
+let cont = 0;
+
+function cambiarTurnoConBot(player1, player2, caja, cajas){
+    cambiarJugador = "false";
+    console.log(cambiarJugador);
+
+    if(caja.innerHTML == ""){
+        caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.jugador}"/>`;
+        ganadorEmpate(cajas);
+        cambiarJugador = "true";
+    }
+    console.log(cambiarJugador);
+    if(cont < 4 && cambiarJugador == "true"){
+        console.log(cont);
+        turnoBot(player2, cajas);
+        cont++;
+    }
+}
+
+const turnoBot = (player2, cajas) => {
+    let posicion;
+    let caja = "";
+    do{
+        posicion = randMinMax(0, 8);
+        caja = cajas[posicion];
+    }while(caja.innerHTML != "")
+
+    caja.innerHTML = `<img src="${player2.imagen}" class="${player2.clase}" id="${player2.jugador}"/>`;
+};
+
 // Mediante esta funcion Gestionamos la Posicion del bot en el tablero y si hay un bot
 
 function quienesJuegan(){
@@ -154,19 +177,21 @@ function quienesJuegan(){
     }else if(user.bot.boton == "Boton1"){
         document.getElementById("jug1").innerHTML = user.bot.name;
         document.getElementById("jug2").innerHTML = user.player2.jugador;
+        document.getElementById("ficha1").innerHTML = `<div class="plataformaDedede"><img src="${user.bot.imagen}" class="metaJug" /></div>`;
         posicion = 2;
     }else if(user.bot.boton == "Boton2"){
         document.getElementById("jug1").innerHTML = user.player1.jugador;
         document.getElementById("jug2").innerHTML = user.bot.name;
+        document.getElementById("ficha2").innerHTML = `<div class="plataformaDedede"><img src="${user.bot.imagen}" class="metaJug" /></div>`;
         posicion = 3;
-    }else{
-        console.log("Algo falla");
     }
     return posicion;
 }
 
-// Con el forof comprobamos a que caja le clica y añadimos una reaccion que nos cambiara de jugador y nos insertara una imagen segun el jugador
+// Añadimos dos booleanos, uno para que nos comprueba si esta jugando el bot solo una vez y el otro
+// para que dependiendo si esta el bot o no, nos ejecute diferentes funciones de como insertar la ficha
 let quienJuega = true;
+let jugadorOBot = 1;
 
 function empiezaJuego(){
     let player1;
@@ -180,30 +205,29 @@ function empiezaJuego(){
             case 2:
                 player1 = user.bot;
                 player2 = user.player2;
+                jugadorOBot = 2;
                 break;
             case 3:
                 player1 = user.player1;
                 player2 = user.bot;
+                jugadorOBot = 3;
                 break;
         }
         quienJuega = false;
     }
-
+// Con el forof recorremos todas las cajas del 3 en raya
     for (const caja of cajas) {
         caja.addEventListener("click", () => {
-            // console.log(user);
-            // if(user.bot.boton == ""){
-            //     cambiarTurno(user.player1, user.player2, caja);
-            // }else if(user.bot.boton == "Boton1"){
-            //     cambiarTurno(user.player1, user.player2, caja);
-            // console.log("Ya esta aquiiiii");
-            // }else if(user.bot.boton == "Boton2"){
-            //     cambiarTurno(user.player1, user.player2, caja);
-            //     console.log("Ya esta aquiiiii");
-            // }else{
-            //     console.log("Algo falla");
-            // }
-            cambiarTurno(player1, player2, caja);
+            if(jugadorOBot == 1){
+                console.log("Jugadores");
+                cambiarTurno(player1, player2, caja);
+            }else if(jugadorOBot == 2){
+                console.log("Jugador y bot");
+                cambiarTurnoConBot(player2, player1, caja, cajas);
+            }else if(jugadorOBot == 3){
+                console.log("Jugador y bot");
+                cambiarTurnoConBot(player1, player2, caja, cajas);
+            }
             ganadorEmpate(cajas);
         });
     }

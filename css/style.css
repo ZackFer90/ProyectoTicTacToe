@@ -110,6 +110,19 @@ button{
     height: 87px;
     width: 70px;
     margin-left: 40px;
+    margin-top: 10px;
+}
+
+.plataformaDedede {
+    color: none;
+    background-image: url("/imagenes/plataforma.png");
+    background-size: 120px 50px;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-color: none;
+    height: 90px;
+    width: 80px;
+    margin-left: 40px;
     margin-top: -10px;
 }
 
@@ -123,6 +136,7 @@ button{
     height: 75px;
     width: 70px;
     margin-left: 40px;
+    margin-top: 10px;
 }
 
 .tamañoCelda{

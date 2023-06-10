@@ -34,7 +34,7 @@ let gameObject = {
         boton: "",
         imagen: "imagenes/ReyDedede.png",
         clase: "metaKnight",
-        icono: "imagenes/iconoMeta.png",
+        icono: "imagenes/iconoDedede.png",
         ganadorClase: "ganadorMeta",
         winnerClass: "ganadorTrogeo",
     },

@@ -23,6 +23,11 @@ function cambiarPantalla(){
         nombreJugador.innerHTML = user.winner;
         trofeo.innerHTML = `<img src="${user.player2.imagen}" class="${user.player2.ganadorClase}" />`;
         personaje.innerHTML = user.player2.name;
+    }else if(user.winner == user.bot.jugador){
+        icono.innerHTML = `<img src="${user.bot.icono}" class="iconoGana" />`;
+        nombreJugador.innerHTML = "Pensabas que ganarias?";
+        trofeo.innerHTML = `<img src="${user.bot.imagen}" class="${user.bot.ganadorClase}" />`;
+        personaje.innerHTML = user.bot.name;
     }else{
         icono.innerHTML = `<img src="${user.empate.icono}" class="iconoGana" />`;
         nombreJugador.innerHTML = "";
