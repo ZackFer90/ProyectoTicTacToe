@@ -149,6 +149,10 @@ button{
 
 /* Ganador */
 
+#icono{
+    margin-top: 10px;
+}
+
 .colorGana{
     background-image: url("/imagenes/Fondo.jpg");
     background-repeat: no-repeat;
@@ -203,10 +207,28 @@ button{
     margin-top: 30%;
 }
 
-.ganadorTrogeo{
+.ganadorMeta{
     width: 350;
     height: 350px;
     margin-left: 40px;
+}
+
+.ganadorKirby{
+    width: 320;
+    height: 320px;
+    margin-left: 40px;
+}
+
+.fondoTransparenteIcono{
+    background-color: rgba(27, 26, 26, 0.3);
+}
+
+.mtj{
+    margin-top: -10px;
+}
+
+#personaje{
+    margin-top: 10px;
 }
 
 @media (min-width: 992px){
@@ -334,5 +356,9 @@ button{
 
     .mtj{
         margin-top: -10px;
+    }
+
+    #personaje{
+        margin-top: 0px;
     }
 }

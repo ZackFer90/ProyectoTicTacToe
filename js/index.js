@@ -2,14 +2,40 @@
 
 let gameObject = {
     player1: {
+        jugador: "",
         name: "Kirby",
         imagen: "imagenes/kirby.png",
         clase: "kirby",
+        icono: "imagenes/iconoKirby.png",
+        fondo: "fondoTransparenteIcono",
+        ganadorClase: "ganadorKirby",
+        winnerClass: "ganadorTrogeo",
     },
     player2: {
+        jugador: "",
         name: "metaKnight",
         imagen: "imagenes/metaknight.png",
         clase: "metaKnight",
+        icono: "imagenes/iconoMeta.png",
+        ganadorClase: "ganadorMeta",
+        winnerClass: "ganadorTrogeo",
+    },
+    empate: {
+        name: "Ganar?",
+        imagen: "imagenes/imagenEmpate.png",
+        ganadorClase: "ganadorKirby",
+        icono: "imagenes/iconoEmpate.jpg",
+        texto: "Aqui nadie gana",
+
+    },
+    bot: {
+        name: "Rey Dedede",
+        boton: "",
+        imagen: "imagenes/ReyDedede.png",
+        clase: "metaKnight",
+        icono: "imagenes/iconoMeta.png",
+        ganadorClase: "ganadorMeta",
+        winnerClass: "ganadorTrogeo",
     },
     winner: null,
  };
@@ -24,9 +50,9 @@ clicar1.addEventListener("click", () => {
     palabra = document.getElementById("jug1").value;
     if(palabra != ""){
         clicar1.disabled = true;
-        gameObject.player1.name=palabra;
+        gameObject.player1.jugador=palabra;
         cont++;
-        cambiarVentana(palabra);
+        cambiarVentana();
     }
 });
 
@@ -37,16 +63,40 @@ clicar2.addEventListener("click", () => {
     palabra = document.getElementById("jug2").value;
     if(palabra != ""){
         clicar2.disabled = true;
-        gameObject.player2.name=palabra;
+        gameObject.player2.jugador=palabra;
         cont++;
-        cambiarVentana(palabra);
+        cambiarVentana();
     }
+    
+});
+
+// Clicamos en Bot
+
+const clicar3 = document.getElementById("botonBot1");
+clicar3.addEventListener("click", () => {
+    clicar3.disabled = true;
+    clicar4.disabled = true;
+    clicar1.disabled = true;
+    cont++;
+    gameObject.empate.boton = "Boton1";
+    cambiarVentana();
+    
+});
+
+const clicar4 = document.getElementById("botonBot2");
+clicar4.addEventListener("click", () => {
+    clicar4.disabled = true;
+    clicar3.disabled = true;
+    clicar2.disabled = true;
+    cont++;
+    gameObject.empate.boton = "Boton2";
+    cambiarVentana();
     
 });
 
 //Cuando pulsemos dos botones nos llevamos el objeto y nos vamos a la otra pagina
 
-function cambiarVentana(jug){
+function cambiarVentana(){
     if(cont == 2){
         sessionStorage.setItem("clave", JSON.stringify(gameObject));
         window.location.assign("ticTacToe.html");

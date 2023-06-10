@@ -14,26 +14,24 @@
   <body>
     <div class="colorGana">
       <div class="d-flex align-items-center justify-content-center cajaGanador">
-        <div class="plataformaMetaGanador">
-          <img src="imagenes/metaKnight.png" class="ganadorTrogeo" />
-        </div>
+        <div class="plataformaMetaGanador" id="trofeo"></div>
       </div>
       <div class="cajaGanadorBottom">
         <div class="dentroCajaBottom">
           <div class="row d-flex justify-content-center">
-            <div class="col-6 letraGrande"><p class="winner">Winner!</p></div>
+            <div class="col-6 letraGrande">
+              <p class="winner" id="empatar">Winner!</p>
+            </div>
             <div class="col-5 recotarCaja">
               <div class="col-12">
                 <div class="row infoJug">
                   <div class="col-12">
                     <div class="row">
-                      <div class="col-6"><p>Kirby</p></div>
-                      <div class="col-6">
-                        <img src="/imagenes/iconoMeta.png" class="iconoGana" />
-                      </div>
+                      <div class="col-6"><p id="personaje">Kirby</p></div>
+                      <div class="col-6" id="icono"></div>
                     </div>
                   </div>
-                  <div class="col-12 mtj"><p>jugador???</p></div>
+                  <div class="col-12 mtj"><p id="ganador">jugador???</p></div>
                 </div>
               </div>
             </div>
@@ -44,6 +42,7 @@
     <!-- <audio autoplay>
       <source src="./audio/Victory.mp3" type="audio/mp3" />
     </audio> -->
+    <script src="js/ganador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
