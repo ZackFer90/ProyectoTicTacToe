@@ -26,7 +26,7 @@ Decidí crear web de tic tac toe con diseño del juego de smash bros, principalm
 ## Deploy 🚀
 
 <div align="center">
-    <a href="https://github.com/ZackFer90/ProyectoTicTacToe"><strong>Url a producción </strong></a>🚀🚀🚀
+    <a href="https://zackfer90.github.io/ProyectoTicTacToe/"><strong>Url a producción </strong></a>🚀🚀🚀
 </div>
 
 ## Stack
@@ -79,7 +79,7 @@ Para conseguir mi objetivo he recopilado información de:
 <h3>Javascipt</h3>
 
 - https://www.programacionfacil.org/cursos/javascript/capitulo_35_javascript_anadir_modificar_propiedades_objetos.html
-- 
+-
 
 ## Agradecimientos:
 
@@ -87,11 +87,11 @@ Agradezco a mis compañeros el tiempo dedicado a este proyecto:
 
 - **Fidel**
 
-- **Rodri**
-
 - **Esteven**
 
 - **Adriana**
+
+- **Adri**
 
 - **Jose**
 

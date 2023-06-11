@@ -32,9 +32,9 @@ let gameObject = {
         jugador: "bot",
         name: "Rey Dedede",
         boton: "",
-        imagen: "imagenes/ReyDedede.png",
+        imagen: "/imagenes/ReyDedede.png",
         clase: "metaKnight",
-        icono: "imagenes/iconoDedede.png",
+        icono: "/imagenes/iconoDedede.png",
         ganadorClase: "ganadorMeta",
         winnerClass: "ganadorTrogeo",
     },
@@ -43,6 +43,14 @@ let gameObject = {
 
 let palabra = "";
 let cont = 0;
+
+let enchegar = document.getElementById('musica');
+
+function playAudio() {
+    enchegar.play();
+}
+
+playAudio();
 
 //Clicamos al boton de jugador kirby que se realicen acciones: guardar usuario y inahabilitar boton
 
