@@ -21,7 +21,7 @@ Este proyecto requiere entregar una web con un juego de tic tac toe.
 
 ## Sobre el proyecto 🔎
 
-Decidí crear web de tic tac toe con diseño del juego de smash bros, principalmente en los personages del muundo de kirby.
+Decidí crear web de tic tac toe con diseño del juego de smash bros, principalmente en los personages del mundo de kirby.
 
 ## Deploy 🚀
 

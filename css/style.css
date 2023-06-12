@@ -183,7 +183,7 @@ button{
     height: 90px;
     width: 390px;
     background-color: #f8d653;
-    margin-top: 30%;
+    margin-top: 25%;
 }
 
 .iconoGana{
@@ -206,6 +206,11 @@ button{
 
 .infoJug{
     margin-top: 5%;
+}
+
+.empezarDeNuevo{
+    margin-top: 3%;
+    margin-right: 20%;
 }
 
 .plataformaMetaGanador{
@@ -374,5 +379,11 @@ button{
 
     #personaje{
         margin-top: 0px;
+    }
+
+    .empezarDeNuevo{
+        margin-top: 3%;
+        margin-right: 0%;
+        margin: 2%;
     }
 }

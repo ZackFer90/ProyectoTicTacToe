@@ -20,11 +20,10 @@ let arrayEntrar = [true, true, true, true, true, true, true, true];
 
 ///Esta funcion nos comprueba 3 campos que recibimos si son iguales
 
-function ganadorTresCampos(campo1, campo2, campo3){
-        if(campo1 == campo2 && campo1 == campo3){
-            console.log("Campo lleno " + campo1);
-            user.winner = campo1;
-            sessionStorage.setItem("clave", JSON.stringify(user));
+function compararId(id1, id2, id3){
+        if(id1 == id2 && id1 == id3){
+            usuario.winner = id1;
+            sessionStorage.setItem("clave", JSON.stringify(usuario));
             window.location.assign("ganador.html");
         }
 }
@@ -35,44 +34,68 @@ function campoLleno(campos){
     
 ///Horizontales
     if(campos[0][0].innerHTML != "" && campos[0][1].innerHTML != "" && campos[0][2].innerHTML != "" && arrayEntrar[0]){
-        ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[0][1].querySelector('img').getAttribute('id'), campos[0][2].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[0][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[0][2].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[0] = false;
     }
 
     if(campos[1][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[1][2].innerHTML != "" && arrayEntrar[1]){
-        ganadorTresCampos(campos[1][0].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[1][2].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[1][0].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[1][2].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[1] = false;
     }
 
     if(campos[2][0].innerHTML != "" && campos[2][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[2]){
-        ganadorTresCampos(campos[2][0].querySelector('img').getAttribute('id'), campos[2][1].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[2][0].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[2][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[2] = false;
     }
 
 ///Verticales
     if(campos[0][0].innerHTML != "" && campos[1][0].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[3]){
-        ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[1][0].querySelector('img').getAttribute('id'), campos[2][0].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][0].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][0].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[3] = false;
     }
 
     if(campos[0][1].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][1].innerHTML != "" && arrayEntrar[4]){
-        ganadorTresCampos(campos[0][1].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][1].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][1].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][1].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[4] = false;
     }
 
     if(campos[0][2].innerHTML != "" && campos[1][2].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[5]){
-        ganadorTresCampos(campos[1][2].querySelector('img').getAttribute('id'), campos[1][2].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][2].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][2].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[5] = false;
     }
 
 ///Diagonal
     if(campos[0][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[6]){
-        ganadorTresCampos(campos[0][0].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][2].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[6] = false;
     }
 
     if(campos[0][2].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[7]){
-        ganadorTresCampos(campos[0][2].querySelector('img').getAttribute('id'), campos[1][1].querySelector('img').getAttribute('id'), campos[2][0].querySelector('img').getAttribute('id'));
+        let idFicha0 = campos[0][2].querySelector('img').getAttribute('id');
+        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = campos[2][0].querySelector('img').getAttribute('id');
+        compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[7] = false;
     }
 }
@@ -95,8 +118,8 @@ function ganadorEmpate(array){
         if (casilla.innerHTML != ""){
 
             if(empate == 8){
-                user.winner = "Empate";
-                sessionStorage.setItem("clave", JSON.stringify(user));
+                usuario.winner = "Empate";
+                sessionStorage.setItem("clave", JSON.stringify(usuario));
                 window.location.assign("ganador.html");
             }
             empate++;
@@ -108,7 +131,7 @@ function ganadorEmpate(array){
 
 // Nos traemos un objetos con diversos datos
 
-let user = JSON.parse(sessionStorage.getItem("clave"));
+let usuario = JSON.parse(sessionStorage.getItem("clave"));
 
 // Recogemos las 9 celdas del tres en raya en cajas
 
@@ -123,13 +146,17 @@ let cambiarJugador = true;
 function cambiarTurno(player1, player2, caja) {
     if(cambiarJugador){
         if(caja.innerHTML == ""){
-            caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.jugador}"/>`;
+            caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.name}"/>`;
             cambiarJugador = false;
+            document.getElementById("jug2").style.backgroundColor = "green";
+            document.getElementById("jug1").style.backgroundColor = "white";
         }
     }else{
         if(caja.innerHTML == ""){
-            caja.innerHTML = `<img src="${player2.imagen}" class="${player2.clase}" id="${player2.jugador}"/>`;
+            caja.innerHTML = `<img src="${player2.imagen}" class="${player2.clase}" id="${player2.name}"/>`;
             cambiarJugador = true;
+            document.getElementById("jug1").style.backgroundColor = "green";
+            document.getElementById("jug2").style.backgroundColor = "white";
         }
     }
 }
@@ -141,7 +168,7 @@ function cambiarTurnoConBot(player1, player2, caja, cajas){
     console.log(cambiarJugador);
 
     if(caja.innerHTML == ""){
-        caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.jugador}"/>`;
+        caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.name}"/>`;
         ganadorEmpate(cajas);
         cambiarJugador = "true";
     }
@@ -168,21 +195,21 @@ const turnoBot = (player2, cajas) => {
 
 function quienesJuegan(){
     let posicion;
-    if(user.bot.boton == ""){
+    if(usuario.bot.boton == ""){
         // Mostramos a trabes del input los datos recogidos por el session
 
-        document.getElementById("jug1").innerHTML = user.player1.jugador;
-        document.getElementById("jug2").innerHTML = user.player2.jugador;
+        document.getElementById("jug1").innerHTML = usuario.player1.jugador;
+        document.getElementById("jug2").innerHTML = usuario.player2.jugador;
         posicion = 1;
-    }else if(user.bot.boton == "Boton1"){
-        document.getElementById("jug1").innerHTML = user.bot.name;
-        document.getElementById("jug2").innerHTML = user.player2.jugador;
-        document.getElementById("ficha1").innerHTML = `<div class="plataformaDedede"><img src="${user.bot.imagen}" class="metaJug" /></div>`;
+    }else if(usuario.bot.boton == "Boton1"){
+        document.getElementById("jug1").innerHTML = usuario.bot.name;
+        document.getElementById("jug2").innerHTML = usuario.player2.jugador;
+        document.getElementById("ficha1").innerHTML = `<div class="plataformaDedede"><img src="${usuario.bot.imagen}" class="metaJug" /></div>`;
         posicion = 2;
-    }else if(user.bot.boton == "Boton2"){
-        document.getElementById("jug1").innerHTML = user.player1.jugador;
-        document.getElementById("jug2").innerHTML = user.bot.name;
-        document.getElementById("ficha2").innerHTML = `<div class="plataformaDedede"><img src="${user.bot.imagen}" class="metaJug" /></div>`;
+    }else if(usuario.bot.boton == "Boton2"){
+        document.getElementById("jug1").innerHTML = usuario.player1.jugador;
+        document.getElementById("jug2").innerHTML = usuario.bot.name;
+        document.getElementById("ficha2").innerHTML = `<div class="plataformaDedede"><img src="${usuario.bot.imagen}" class="metaJug" /></div>`;
         posicion = 3;
     }
     return posicion;
@@ -194,22 +221,23 @@ let quienJuega = true;
 let jugadorOBot = 1;
 
 function empiezaJuego(){
-    let player1;
-    let player2;
+    let jugador1;
+    let jugador2;
     if(quienJuega){
         switch (quienesJuegan()) {
             case 1:
-                player1 = user.player1;
-                player2 = user.player2;
+                jugador1 = usuario.player1;
+                jugador2 = usuario.player2;
+                document.getElementById("jug1").style.backgroundColor = "green";
                 break;
             case 2:
-                player1 = user.bot;
-                player2 = user.player2;
+                jugador1 = usuario.bot;
+                jugador2 = usuario.player2;
                 jugadorOBot = 2;
                 break;
             case 3:
-                player1 = user.player1;
-                player2 = user.bot;
+                jugador1 = usuario.player1;
+                jugador2 = usuario.bot;
                 jugadorOBot = 3;
                 break;
         }
@@ -219,14 +247,14 @@ function empiezaJuego(){
     for (const caja of cajas) {
         caja.addEventListener("click", () => {
             if(jugadorOBot == 1){
-                console.log("Jugadores");
-                cambiarTurno(player1, player2, caja);
+                // console.log("Jugadores");
+                cambiarTurno(jugador1, jugador2, caja);
             }else if(jugadorOBot == 2){
-                console.log("Jugador y bot");
-                cambiarTurnoConBot(player2, player1, caja, cajas);
+                // console.log("Jugador y bot");
+                cambiarTurnoConBot(jugador2, jugador1, caja, cajas);
             }else if(jugadorOBot == 3){
-                console.log("Jugador y bot");
-                cambiarTurnoConBot(player1, player2, caja, cajas);
+                // console.log("Jugador y bot");
+                cambiarTurnoConBot(jugador1, jugador2, caja, cajas);
             }
             ganadorEmpate(cajas);
         });

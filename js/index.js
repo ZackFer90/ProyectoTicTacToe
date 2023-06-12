@@ -1,6 +1,6 @@
 // Objeto donde guardar todos los datos
 
-let gameObject = {
+let objetoDelJuego = {
     player1: {
         jugador: "",
         name: "Kirby",
@@ -9,7 +9,6 @@ let gameObject = {
         icono: "imagenes/iconoKirby.png",
         fondo: "fondoTransparenteIcono",
         ganadorClase: "ganadorKirby",
-        winnerClass: "ganadorTrogeo",
     },
     player2: {
         jugador: "",
@@ -18,7 +17,6 @@ let gameObject = {
         clase: "metaKnight",
         icono: "imagenes/iconoMeta.png",
         ganadorClase: "ganadorMeta",
-        winnerClass: "ganadorTrogeo",
     },
     empate: {
         name: "Ganar?",
@@ -60,7 +58,7 @@ clicar1.addEventListener("click", () => {
     if(palabra != ""){
         clicar1.disabled = true;
         clicar3.disabled = true;
-        gameObject.player1.jugador=palabra;
+        objetoDelJuego.player1.jugador=palabra;
         cont++;
         cambiarVentana();
     }
@@ -74,7 +72,7 @@ clicar2.addEventListener("click", () => {
     if(palabra != ""){
         clicar2.disabled = true;
         clicar4.disabled = true;
-        gameObject.player2.jugador=palabra;
+        objetoDelJuego.player2.jugador=palabra;
         cont++;
         cambiarVentana();
     } 
@@ -84,7 +82,7 @@ clicar2.addEventListener("click", () => {
 
 const clicar3 = document.getElementById("botonBot1");
 clicar3.addEventListener("click", () => {
-    gameObject.bot.boton = "Boton1";
+    objetoDelJuego.bot.boton = "Boton1";
     clicar3.disabled = true;
     clicar4.disabled = true;
     clicar1.disabled = true;
@@ -95,7 +93,7 @@ clicar3.addEventListener("click", () => {
 
 const clicar4 = document.getElementById("botonBot2");
 clicar4.addEventListener("click", () => {
-    gameObject.bot.boton = "Boton2";
+    objetoDelJuego.bot.boton = "Boton2";
     clicar4.disabled = true;
     clicar3.disabled = true;
     clicar2.disabled = true;
@@ -107,9 +105,9 @@ clicar4.addEventListener("click", () => {
 //Cuando pulsemos dos botones nos llevamos el objeto y nos vamos a la otra pagina
 
 function cambiarVentana(){
-    console.log(gameObject.bot.boton);
+    console.log(objetoDelJuego.bot.boton);
     if(cont == 2){
-        sessionStorage.setItem("clave", JSON.stringify(gameObject));
+        sessionStorage.setItem("clave", JSON.stringify(objetoDelJuego));
         window.location.assign("ticTacToe.html");
     }
 }
