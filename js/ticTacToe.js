@@ -147,14 +147,14 @@ function cambiarTurno(jugador1, jugador2, caja) {
         if(caja.innerHTML == ""){
             caja.innerHTML = `<img src="${jugador1.imagen}" class="${jugador1.clase}" id="${jugador1.nombre}"/>`;
             cambiarJugador = false;
-            document.getElementById("jug2").style.backgroundColor = "green";
+            document.getElementById("jug2").style.backgroundColor = "orange";
             document.getElementById("jug1").style.backgroundColor = "white";
         }
     }else{
         if(caja.innerHTML == ""){
             caja.innerHTML = `<img src="${jugador2.imagen}" class="${jugador2.clase}" id="${jugador2.nombre}"/>`;
             cambiarJugador = true;
-            document.getElementById("jug1").style.backgroundColor = "green";
+            document.getElementById("jug1").style.backgroundColor = "orange";
             document.getElementById("jug2").style.backgroundColor = "white";
         }
     }
@@ -227,7 +227,7 @@ function empiezaJuego(){
             case 1:
                 jugador1 = usuario.jugador1;
                 jugador2 = usuario.jugador2;
-                document.getElementById("jug1").style.backgroundColor = "green";
+                document.getElementById("jug1").style.backgroundColor = "orange";
                 break;
             case 2:
                 jugador1 = usuario.bot;
