@@ -1,25 +1,25 @@
 // Objeto donde guardar todos los datos
 
 let objetoDelJuego = {
-    player1: {
+    jugador1: {
         jugador: "",
-        name: "Kirby",
+        nombre: "Kirby",
         imagen: "imagenes/kirby.png",
         clase: "kirby",
         icono: "imagenes/iconoKirby.png",
         fondo: "fondoTransparenteIcono",
         ganadorClase: "ganadorKirby",
     },
-    player2: {
+    jugador2: {
         jugador: "",
-        name: "metaKnight",
+        nombre: "metaKnight",
         imagen: "imagenes/metaknight.png",
         clase: "metaKnight",
         icono: "imagenes/iconoMeta.png",
         ganadorClase: "ganadorMeta",
     },
     empate: {
-        name: "Ganar?",
+        nombre: "Ganar?",
         imagen: "imagenes/imagenEmpate.png",
         ganadorClase: "ganadorKirby",
         icono: "imagenes/iconoEmpate.jpg",
@@ -28,13 +28,12 @@ let objetoDelJuego = {
     },
     bot: {
         jugador: "bot",
-        name: "Rey Dedede",
+        nombre: "Rey Dedede",
         boton: "",
         imagen: "/imagenes/ReyDedede.png",
         clase: "metaKnight",
         icono: "/imagenes/iconoDedede.png",
         ganadorClase: "ganadorMeta",
-        winnerClass: "ganadorTrogeo",
     },
     winner: null,
  };
@@ -58,7 +57,7 @@ clicar1.addEventListener("click", () => {
     if(palabra != ""){
         clicar1.disabled = true;
         clicar3.disabled = true;
-        objetoDelJuego.player1.jugador=palabra;
+        objetoDelJuego.jugador1.jugador=palabra;
         cont++;
         cambiarVentana();
     }
@@ -72,7 +71,7 @@ clicar2.addEventListener("click", () => {
     if(palabra != ""){
         clicar2.disabled = true;
         clicar4.disabled = true;
-        objetoDelJuego.player2.jugador=palabra;
+        objetoDelJuego.jugador2.jugador=palabra;
         cont++;
         cambiarVentana();
     } 

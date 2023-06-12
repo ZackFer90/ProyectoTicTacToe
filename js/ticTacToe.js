@@ -30,71 +30,71 @@ function compararId(id1, id2, id3){
 
 ///Comprobamos si los campos en linia estan vacios o no, en caso de estar llenos no reenvia a otra funcion
 
-function campoLleno(campos){
+function casillasLlenas(casillas){
     
 ///Horizontales
-    if(campos[0][0].innerHTML != "" && campos[0][1].innerHTML != "" && campos[0][2].innerHTML != "" && arrayEntrar[0]){
-        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[0][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[0][2].querySelector('img').getAttribute('id');
+    if(casillas[0][0].innerHTML != "" && casillas[0][1].innerHTML != "" && casillas[0][2].innerHTML != "" && arrayEntrar[0]){
+        let idFicha0 = casillas[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[0][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[0][2].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[0] = false;
     }
 
-    if(campos[1][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[1][2].innerHTML != "" && arrayEntrar[1]){
-        let idFicha0 = campos[1][0].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[1][2].querySelector('img').getAttribute('id');
+    if(casillas[1][0].innerHTML != "" && casillas[1][1].innerHTML != "" && casillas[1][2].innerHTML != "" && arrayEntrar[1]){
+        let idFicha0 = casillas[1][0].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[1][2].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[1] = false;
     }
 
-    if(campos[2][0].innerHTML != "" && campos[2][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[2]){
-        let idFicha0 = campos[2][0].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[2][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+    if(casillas[2][0].innerHTML != "" && casillas[2][1].innerHTML != "" && casillas[2][2].innerHTML != "" && arrayEntrar[2]){
+        let idFicha0 = casillas[2][0].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[2][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][2].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[2] = false;
     }
 
 ///Verticales
-    if(campos[0][0].innerHTML != "" && campos[1][0].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[3]){
-        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][0].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][0].querySelector('img').getAttribute('id');
+    if(casillas[0][0].innerHTML != "" && casillas[1][0].innerHTML != "" && casillas[2][0].innerHTML != "" && arrayEntrar[3]){
+        let idFicha0 = casillas[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][0].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][0].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[3] = false;
     }
 
-    if(campos[0][1].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][1].innerHTML != "" && arrayEntrar[4]){
-        let idFicha0 = campos[0][1].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][1].querySelector('img').getAttribute('id');
+    if(casillas[0][1].innerHTML != "" && casillas[1][1].innerHTML != "" && casillas[2][1].innerHTML != "" && arrayEntrar[4]){
+        let idFicha0 = casillas[0][1].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][1].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[4] = false;
     }
 
-    if(campos[0][2].innerHTML != "" && campos[1][2].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[5]){
-        let idFicha0 = campos[0][2].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][2].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+    if(casillas[0][2].innerHTML != "" && casillas[1][2].innerHTML != "" && casillas[2][2].innerHTML != "" && arrayEntrar[5]){
+        let idFicha0 = casillas[0][2].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][2].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][2].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[5] = false;
     }
 
 ///Diagonal
-    if(campos[0][0].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][2].innerHTML != "" && arrayEntrar[6]){
-        let idFicha0 = campos[0][0].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][2].querySelector('img').getAttribute('id');
+    if(casillas[0][0].innerHTML != "" && casillas[1][1].innerHTML != "" && casillas[2][2].innerHTML != "" && arrayEntrar[6]){
+        let idFicha0 = casillas[0][0].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][2].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[6] = false;
     }
 
-    if(campos[0][2].innerHTML != "" && campos[1][1].innerHTML != "" && campos[2][0].innerHTML != "" && arrayEntrar[7]){
-        let idFicha0 = campos[0][2].querySelector('img').getAttribute('id');
-        let idFicha1 = campos[1][1].querySelector('img').getAttribute('id');
-        let idFicha2 = campos[2][0].querySelector('img').getAttribute('id');
+    if(casillas[0][2].innerHTML != "" && casillas[1][1].innerHTML != "" && casillas[2][0].innerHTML != "" && arrayEntrar[7]){
+        let idFicha0 = casillas[0][2].querySelector('img').getAttribute('id');
+        let idFicha1 = casillas[1][1].querySelector('img').getAttribute('id');
+        let idFicha2 = casillas[2][0].querySelector('img').getAttribute('id');
         compararId(idFicha0, idFicha1, idFicha2);
         arrayEntrar[7] = false;
     }
@@ -104,12 +104,12 @@ function campoLleno(campos){
 
 function ganadorEmpate(array){
 
-    let arrayPos = [  [array[0] , array[1], array[2]],
+    let arrayPosiciones = [  [array[0] , array[1], array[2]],
      [array[3] , array[4], array[5]],
       [array[6] , array[7], array[8]]
     ];
 
-    campoLleno(arrayPos);
+    casillasLlenas(arrayPosiciones);
 
     setTimeout(() => {
         let empate = 0;
@@ -143,17 +143,17 @@ let cambiarJugador = true;
 
 // Gestionamos los turnos de los dos jugadores
 
-function cambiarTurno(player1, player2, caja) {
+function cambiarTurno(jugador1, jugador2, caja) {
     if(cambiarJugador){
         if(caja.innerHTML == ""){
-            caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.name}"/>`;
+            caja.innerHTML = `<img src="${jugador1.imagen}" class="${jugador1.clase}" id="${jugador1.nombre}"/>`;
             cambiarJugador = false;
             document.getElementById("jug2").style.backgroundColor = "green";
             document.getElementById("jug1").style.backgroundColor = "white";
         }
     }else{
         if(caja.innerHTML == ""){
-            caja.innerHTML = `<img src="${player2.imagen}" class="${player2.clase}" id="${player2.name}"/>`;
+            caja.innerHTML = `<img src="${jugador2.imagen}" class="${jugador2.clase}" id="${jugador2.nombre}"/>`;
             cambiarJugador = true;
             document.getElementById("jug1").style.backgroundColor = "green";
             document.getElementById("jug2").style.backgroundColor = "white";
@@ -163,24 +163,24 @@ function cambiarTurno(player1, player2, caja) {
 
 let cont = 0;
 
-function cambiarTurnoConBot(player1, player2, caja, cajas){
+function cambiarTurnoConBot(jugador1, jugador2, caja, cajas){
     cambiarJugador = "false";
     console.log(cambiarJugador);
 
     if(caja.innerHTML == ""){
-        caja.innerHTML = `<img src="${player1.imagen}" class="${player1.clase}" id="${player1.name}"/>`;
+        caja.innerHTML = `<img src="${jugador1.imagen}" class="${jugador1.clase}" id="${jugador1.nombre}"/>`;
         ganadorEmpate(cajas);
         cambiarJugador = "true";
     }
     console.log(cambiarJugador);
     if(cont < 4 && cambiarJugador == "true"){
         console.log(cont);
-        turnoBot(player2, cajas);
+        turnoBot(jugador2, cajas);
         cont++;
     }
 }
 
-const turnoBot = (player2, cajas) => {
+const turnoBot = (jugador2, cajas) => {
     let posicion;
     let caja = "";
     do{
@@ -188,7 +188,7 @@ const turnoBot = (player2, cajas) => {
         caja = cajas[posicion];
     }while(caja.innerHTML != "")
 
-    caja.innerHTML = `<img src="${player2.imagen}" class="${player2.clase}" id="${player2.jugador}"/>`;
+    caja.innerHTML = `<img src="${jugador2.imagen}" class="${jugador2.clase}" id="${jugador2.jugador}"/>`;
 };
 
 // Mediante esta funcion Gestionamos la Posicion del bot en el tablero y si hay un bot
@@ -198,17 +198,17 @@ function quienesJuegan(){
     if(usuario.bot.boton == ""){
         // Mostramos a trabes del input los datos recogidos por el session
 
-        document.getElementById("jug1").innerHTML = usuario.player1.jugador;
-        document.getElementById("jug2").innerHTML = usuario.player2.jugador;
+        document.getElementById("jug1").innerHTML = usuario.jugador1.jugador;
+        document.getElementById("jug2").innerHTML = usuario.jugador2.jugador;
         posicion = 1;
     }else if(usuario.bot.boton == "Boton1"){
-        document.getElementById("jug1").innerHTML = usuario.bot.name;
-        document.getElementById("jug2").innerHTML = usuario.player2.jugador;
+        document.getElementById("jug1").innerHTML = usuario.bot.nombre;
+        document.getElementById("jug2").innerHTML = usuario.jugador2.jugador;
         document.getElementById("ficha1").innerHTML = `<div class="plataformaDedede"><img src="${usuario.bot.imagen}" class="metaJug" /></div>`;
         posicion = 2;
     }else if(usuario.bot.boton == "Boton2"){
-        document.getElementById("jug1").innerHTML = usuario.player1.jugador;
-        document.getElementById("jug2").innerHTML = usuario.bot.name;
+        document.getElementById("jug1").innerHTML = usuario.jugador1.jugador;
+        document.getElementById("jug2").innerHTML = usuario.bot.nombre;
         document.getElementById("ficha2").innerHTML = `<div class="plataformaDedede"><img src="${usuario.bot.imagen}" class="metaJug" /></div>`;
         posicion = 3;
     }
@@ -226,17 +226,17 @@ function empiezaJuego(){
     if(quienJuega){
         switch (quienesJuegan()) {
             case 1:
-                jugador1 = usuario.player1;
-                jugador2 = usuario.player2;
+                jugador1 = usuario.jugador1;
+                jugador2 = usuario.jugador2;
                 document.getElementById("jug1").style.backgroundColor = "green";
                 break;
             case 2:
                 jugador1 = usuario.bot;
-                jugador2 = usuario.player2;
+                jugador2 = usuario.jugador2;
                 jugadorOBot = 2;
                 break;
             case 3:
-                jugador1 = usuario.player1;
+                jugador1 = usuario.jugador1;
                 jugador2 = usuario.bot;
                 jugadorOBot = 3;
                 break;
