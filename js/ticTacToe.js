@@ -15,14 +15,13 @@ let arrayEntrar = [true, true, true, true, true, true, true, true];
 //         // sessionStorage.setItem("clave", JSON.stringify(user));
 //         // window.location.assign("ganador.html");
 //     }
-
 // }
 
 ///Esta funcion nos comprueba 3 campos que recibimos si son iguales
 
 function compararId(id1, id2, id3){
         if(id1 == id2 && id1 == id3){
-            usuario.winner = id1;
+            usuario.ganador = id1;
             sessionStorage.setItem("clave", JSON.stringify(usuario));
             window.location.assign("ganador.html");
         }
@@ -118,7 +117,7 @@ function ganadorEmpate(array){
         if (casilla.innerHTML != ""){
 
             if(empate == 8){
-                usuario.winner = "Empate";
+                usuario.ganador = "Empate";
                 sessionStorage.setItem("clave", JSON.stringify(usuario));
                 window.location.assign("ganador.html");
             }

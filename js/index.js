@@ -35,7 +35,7 @@ let objetoDelJuego = {
         icono: "/imagenes/iconoDedede.png",
         ganadorClase: "ganadorMeta",
     },
-    winner: null,
+    ganador: null,
  };
 
 let palabra = "";
