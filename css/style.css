@@ -5,14 +5,14 @@
 }
 
 .fondo {
-    background-image: url("/imagenes/Fondo1.jpg");
+    background-image: url("../imagenes/Fondo1.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     height: 97vh;
 }
 
 .fondoTic {
-    background-image: url("/imagenes/FondoInicio.png");
+    background-image: url("../imagenes/FondoInicio.png");
     background-size:cover;
     background-repeat: no-repeat;
     height: 97vh;
@@ -20,7 +20,7 @@
 
 .plataforma {
     color: none;
-    background-image: url("/imagenes/plataforma.png");
+    background-image: url("../imagenes/plataforma.png");
     background-size: 100px 50px;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -102,7 +102,7 @@ button{
 
 .plataformaMetaJug {
     color: none;
-    background-image: url("/imagenes/plataforma.png");
+    background-image: url("../imagenes/plataforma.png");
     background-size: 100px 50px;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -115,7 +115,7 @@ button{
 
 .plataformaDedede {
     color: none;
-    background-image: url("/imagenes/plataforma.png");
+    background-image: url("../imagenes/plataforma.png");
     background-size: 120px 50px;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -128,7 +128,7 @@ button{
 
 .plataformaJug {
     color: none;
-    background-image: url("/imagenes/plataforma.png");
+    background-image: url("../imagenes/plataforma.png");
     background-size: 100px 50px;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -168,7 +168,7 @@ button{
 }
 
 .colorGana{
-    background-image: url("/imagenes/Fondo.jpg");
+    background-image: url("../imagenes/Fondo.jpg");
     background-repeat: no-repeat;
     background-size: 400px 700px;
     height: 700px;
@@ -215,7 +215,7 @@ button{
 
 .plataformaMetaGanador{
     color: none;
-    background-image: url("/imagenes/plataformaGrande.png");
+    background-image: url("../imagenes/plataformaGrande.png");
     background-size: 500px 300px;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -323,7 +323,7 @@ button{
     }
     
     .colorGana{
-        background-image: url("/imagenes/Fondo.jpg");
+        background-image: url("../imagenes/Fondo.jpg");
         background-repeat: no-repeat;
         background-size: 1365px 608px;
         height: 608px;
@@ -358,7 +358,7 @@ button{
 
     .plataformaMetaGanador{
         color: none;
-        background-image: url("/imagenes/plataformaGrande.png");
+        background-image: url("../imagenes/plataformaGrande.png");
         background-size: 500px 300px;
         background-repeat: no-repeat;
         background-position:bottom;
