@@ -59,7 +59,7 @@ clicar1.addEventListener("click", () => {
         clicar3.disabled = true;
         objetoDelJuego.jugador1.jugador=palabra;
         cont++;
-        cambiarVentana();
+        almacenarObjetoCambiarVentana();
     }
 });
 
@@ -73,7 +73,7 @@ clicar2.addEventListener("click", () => {
         clicar4.disabled = true;
         objetoDelJuego.jugador2.jugador=palabra;
         cont++;
-        cambiarVentana();
+        almacenarObjetoCambiarVentana();
     } 
 });
 
@@ -86,7 +86,7 @@ clicar3.addEventListener("click", () => {
     clicar4.disabled = true;
     clicar1.disabled = true;
     cont++;
-    cambiarVentana();
+    almacenarObjetoCambiarVentana();
     
 });
 
@@ -97,14 +97,13 @@ clicar4.addEventListener("click", () => {
     clicar3.disabled = true;
     clicar2.disabled = true;
     cont++;
-    cambiarVentana();
+    almacenarObjetoCambiarVentana();
     
 });
 
 //Cuando pulsemos dos botones nos llevamos el objeto y nos vamos a la otra pagina
 
-function cambiarVentana(){
-    console.log(objetoDelJuego.bot.boton);
+function almacenarObjetoCambiarVentana(){
     if(cont == 2){
         sessionStorage.setItem("clave", JSON.stringify(objetoDelJuego));
         window.location.assign("ticTacToe.html");
