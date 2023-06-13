@@ -13,7 +13,7 @@ let objetoDelJuego = {
     jugador2: {
         jugador: "",
         nombre: "metaKnight",
-        imagen: "imagenes/metaknight.png",
+        imagen: "imagenes/metaKnight.png",
         clase: "metaKnight",
         icono: "imagenes/iconoMeta.png",
         ganadorClase: "ganadorMeta",
