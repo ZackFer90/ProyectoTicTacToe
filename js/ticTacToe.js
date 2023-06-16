@@ -134,7 +134,7 @@ let usuario = JSON.parse(sessionStorage.getItem("clave"));
 
 // Recogemos las 9 celdas del tres en raya en cajas
 
-const cajas = document.getElementsByClassName("celda");
+const cajas = document.getElementsByClassName("tamañoCelda");
 
 // Con este boolean cambiaremos de jugador
 

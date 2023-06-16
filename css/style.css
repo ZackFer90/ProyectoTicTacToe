@@ -8,14 +8,14 @@
     background-image: url("../imagenes/Fondo1.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 97vh;
+    height: 110vh;
 }
 
 .fondoTic {
     background-image: url("../imagenes/FondoInicio.png");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 97vh;
+    height: 100vh;
 }
 
 .plataforma {
@@ -65,6 +65,11 @@ button{
 }
 
 /* Tic Tac Toe */
+
+.container{
+    width: 350px;
+    height: 300px;
+}
 
 .kirby{
     margin-top: 20px;
@@ -163,6 +168,8 @@ button{
 
 /* Ganador */
 
+
+
 #icono{
     margin-top: 10px;
 }
@@ -180,10 +187,10 @@ button{
 }
 
 .cajaGanadorBottom{
-    height: 90px;
+    height: 100px;
     width: 390px;
     background-color: #f8d653;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 
 .iconoGana{
@@ -250,28 +257,65 @@ button{
     margin-top: 10px;
 }
 
-@media (min-width: 200px){
+@media (min-width: 400px){
+
+    .imagenCentroTic{
+        width: 200px;
+        margin-left: -10%;
+        margin-bottom: 0%;
+    }
+
+    .container{
+        width: 650px;
+        height: 600px;
+    }
+
+    .cajaImagenTic{
+        margin-left: 5%;
+    }
+    
     .tamañoCelda{
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border: 1px solid white;
     }
 
     .metaKnight{
         margin-top: 10px;
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
 
     .kirby{
         margin-top: 20px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
+    .mtTic{
+        margin-top: 97%;
+    }
+
+    .mt1 {
+        margin-top: 97%;
+    }
 }
 
 @media (min-width: 900px){
+
+    .container{
+        width: 500px;
+        height: 500px;
+        margin-left: 70px;
+    }
+
+    .fondo{
+        height: 97vh;
+    }
+
+    .audio{
+        margin-top: 100px;
+    }
     
     .mt2{
         margin-top: 20%;
@@ -295,7 +339,7 @@ button{
 
     .cajaImagen{
         margin-left: 33%;
-        margin-top: -2%;
+        margin-top: -4%;
     }
 
     .cajaImagenTic{
@@ -303,8 +347,8 @@ button{
     }
 
     .tamañoCelda{
-        width: 110px;
-        height: 110px;
+        width: 150px;
+        height: 150px;
         border: 1px solid white;
     }
 
@@ -314,14 +358,14 @@ button{
     
     .kirby{
         margin-top: 20px;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     
     .metaKnight{
         margin-top: 10px;
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
     }
 
     .fondoTransparente{
@@ -333,7 +377,10 @@ button{
     }
 
     .imagenCentroTic{
-        margin-left: -17%;
+        width: 200px;
+        margin-left: 11%;
+        margin-bottom: -8%;
+        margin-top: -5%;
     }
 
     /* Ganador */
@@ -406,5 +453,9 @@ button{
         margin-top: 3%;
         margin-right: 0%;
         margin: 2%;
+    }
+
+    .audioGan{
+        margin-top: -70px;
     }
 }
